@@ -10,7 +10,7 @@ source:
   sha256: 90363de4f6b78f9eec72ac1f030ae2561062cd9c05a7ce6736f886fd1cf6c347
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pfplot=pyfesom2.pfplot:pfplot
@@ -30,7 +30,7 @@ requirements:
     - ipython
     - joblib
     - jupyter
-    - matplotlib
+    - matplotlib-base
     - netcdf4
     - numba
     - numpy >=1.17
