@@ -1,11 +1,11 @@
-About pyfesom2
-==============
+About pyfesom2-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyfesom2-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/FESOM/pyfesom2/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyfesom2-feedstock/blob/main/LICENSE.txt)
 
 Summary: FESOM2 tools
 
@@ -149,4 +149,5 @@ Feedstock Maintainers
 
 * [@koldunovn](https://github.com/koldunovn/)
 * [@pgierz](https://github.com/pgierz/)
+* [@suvarchal](https://github.com/suvarchal/)
 
