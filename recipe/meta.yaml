@@ -31,7 +31,7 @@ requirements:
     - ipython
     - joblib
     - jupyter
-    - matplotlib
+    - matplotlib-base
     - netcdf4
     - numba
     - numpy >=1.17
@@ -43,6 +43,9 @@ requirements:
     - seawater
     - shapely
     - xarray
+    - pymap3d
+    - pyproj
+    - tqdm
 
 test:
   imports:
