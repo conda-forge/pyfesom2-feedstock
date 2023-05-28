@@ -43,6 +43,7 @@ requirements:
     - seawater
     - shapely
     - xarray
+    - pymap3d
 
 test:
   imports:
