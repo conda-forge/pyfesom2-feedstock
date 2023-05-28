@@ -1,5 +1,5 @@
 {% set name = "pyfesom2" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/FESOM/pyfesom2/archive/{{ version }}.tar.gz
-  sha256: 93ef0df2a714ae617c14f683ee2bcfdac0f40d13b69b6c971928d88f8106a5fb
+  sha256: f526e08ba4369270f951f566a52514d74a8bf55c91cd32caba1318b515aa53b5
 
 build:
-  number: 3
+  number: 0
   noarch: python
   entry_points:
     - pfplot=pyfesom2.pfplot:pfplot
