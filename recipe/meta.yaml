@@ -10,7 +10,7 @@ source:
   sha256: f526e08ba4369270f951f566a52514d74a8bf55c91cd32caba1318b515aa53b5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pfplot=pyfesom2.pfplot:pfplot
@@ -23,7 +23,7 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3
+    - python {{ python_min }}
   run:
     - cartopy
     - cmocean
@@ -38,7 +38,7 @@ requirements:
     - pandas >=0.25
     - pyresample
     - pytest-runner
-    - python >=3
+    - python >={{ python_min }}
     - scipy <=1.9.0
     - seawater
     - shapely
@@ -48,6 +48,8 @@ requirements:
     - tqdm
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyfesom2
 
