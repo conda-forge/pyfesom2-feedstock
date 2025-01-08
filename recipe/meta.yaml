@@ -10,20 +10,21 @@ source:
   sha256: f526e08ba4369270f951f566a52514d74a8bf55c91cd32caba1318b515aa53b5
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pfplot=pyfesom2.pfplot:pfplot
     - pfinterp=pyfesom2.pfinterp:pfinterp
-  script: {{ PYTHON }} -m pip install . -vv; ls -lR {{ RECIPE_DIR }} {{ SRC_DIR }} {{ SP_DIR }}; cp -rv {{ SRC_DIR }}/pyfesom2/geojson {{ SP_DIR }}/pyfesom2; ls -lR {{ SP_DIR }}/pyfesom2
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation; ls -lR {{ RECIPE_DIR }} {{ SRC_DIR }} {{ SP_DIR }}; cp -rv {{ SRC_DIR }}/pyfesom2/geojson {{ SP_DIR }}/pyfesom2; ls -lR {{ SP_DIR }}/pyfesom2
   always_include_files:
     - pyfesom2/geojson
 
 requirements:
   host:
+    - python {{ python_min }}
+    - setuptools
     - pip
     - pytest-runner
-    - python >=3
   run:
     - cartopy
     - cmocean
@@ -38,7 +39,7 @@ requirements:
     - pandas >=0.25
     - pyresample
     - pytest-runner
-    - python >=3
+    - python >={{ python_min }}
     - scipy <=1.9.0
     - seawater
     - shapely
@@ -48,6 +49,8 @@ requirements:
     - tqdm
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyfesom2
 
